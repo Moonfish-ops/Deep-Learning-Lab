@@ -1,0 +1,14 @@
+# Downloaded datasets and textbooks
+data/
+*.pdf
+
+# Temporary files and Python caches
+tmp/
+__pycache__/
+*.py[cod]
+
+# Common editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
