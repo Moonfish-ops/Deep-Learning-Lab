@@ -76,7 +76,7 @@ def exercise_1(features, labels):
 
 
 def exercise_5():
-    """习题5：演示不 reshape 时错误广播产生的形状。"""
+    """5、不 reshape 会发生什么。"""
     print("\n reshape 的作用")
     y_hat = torch.tensor([[1.0], [2.0], [3.0]])  # 形状 (3, 1)
     y = torch.tensor([1.1, 1.9, 3.2])            # 形状 (3,)
@@ -89,13 +89,12 @@ def exercise_5():
 
 
 def exercise_7():
-    """习题7：演示最后一个不完整批次仍会被 data_iter 返回。"""
+    """7、样本数不能被批量大小整除"""
     print("\n 样本数不能被批量大小整除")
     demo_features = torch.arange(46, dtype=torch.float32).reshape(23, 2)
     demo_labels = torch.arange(23, dtype=torch.float32).reshape(-1, 1)
     batch_sizes = [len(X) for X, _ in data_iter(10, demo_features, demo_labels)]
     print("23 个样本、batch_size=10，各批大小:", batch_sizes)
-    print("最后 3 个样本不会被丢弃。")
 
 
 def main():
